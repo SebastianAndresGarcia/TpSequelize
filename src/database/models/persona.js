@@ -17,9 +17,9 @@ module.exports = (sequelize, DataTypes) => {
   })
     }
   };
-  Tutorial.init({
-    title: DataTypes.STRING,
-    description: DataTypes.STRING
+  Persona.init({
+    Nombre: DataTypes.STRING,
+    Apellido: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Persona',

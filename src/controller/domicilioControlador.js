@@ -6,11 +6,12 @@ const sequelize = db.sequelize;
 const domicilioControlador = {
    
 
-// crear un comentario
+// crear un domicilio
 create: (id, domicilio) => {
   return db.Domicilio.create({
     calle: domicilio.calle,
     numero: domicilio.numero,
+    localidad: domicilio.localidad,
     personaId: id,
   })
     .then((domicilio) => {
@@ -29,7 +30,7 @@ findDomicilioById : (id) => {
       return domicilio;
     })
     .catch((err) => {
-      console.log(">> Error while finding comment: ", err);
+      console.log(">> Error while finding domicilio: ", err);
     });
 },
 

@@ -15,8 +15,9 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Domicilio.init({
-    name: DataTypes.STRING,
-    text: DataTypes.STRING,
+    calle: DataTypes.STRING,
+    numero: DataTypes.STRING,
+    localidad: DataTypes.STRING,
     personaId: DataTypes.INTEGER
   }, {
     sequelize,
