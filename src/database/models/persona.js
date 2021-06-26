@@ -18,8 +18,8 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Persona.init({
-    Nombre: DataTypes.STRING,
-    Apellido: DataTypes.STRING
+    nombre: DataTypes.STRING,
+    apellido: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Persona',

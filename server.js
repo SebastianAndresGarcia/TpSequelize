@@ -7,41 +7,41 @@ const controllerDomicilios = require('./src/controller/domicilioControlador');
 const run = async () => {
 
     const tut1 = await controllerPersona.create({
-        Nombre: "Sebastian",
-        Apellido: "Garcia",
+        nombre: "Sebastian",
+        apellido: "Garcia",
     });
 
-    console.log('--------CREO EL TUTO 2-------');
+    console.log('--------CREO LA PERSONA 2-------');
   
 
     const tut2 = await controllerPersona.create({
    
-        Nombre: "Juan",
-        Apellido: "Perez",
+        nombre: "Juan",
+        apellido: "Perez",
     });
 
 
     const comment1 = await controllerDomicilios.create(tut1.id, {
         calle: "Aristides",
-        numero: "356",
+        numero: 356,
         localidad: "Ciudad",
     });
 
     await controllerDomicilios.create(tut1.id, {
         calle: "E. Civit",
-        numero: "120",
+        numero: 120,
         localidad: "Ciudad",
     });
 
     const comment2 = await controllerDomicilios.create(tut2.id, {
         calle: "Cervantes",
-        numero: "4560",
+        numero: 4560,
         localidad: "Luján",
     });
 
     await controllerDomicilios.create(tut2.id, {
         calle: "Urquiza",
-        numero: "4560",
+        numero: 4560,
         localidad: "Guaymallén",
     });
 

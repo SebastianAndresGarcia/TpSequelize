@@ -31,7 +31,7 @@ const personaControlador = {
             return persona;
           })
           .catch((err) => {
-            console.log(">> Error while finding tutorial: ", err);
+            console.log(">> Error while finding persona: ", err);
           });
       },
 
